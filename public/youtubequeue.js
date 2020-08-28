@@ -6,7 +6,7 @@ setInterval(() => {
       var iframe = document.getElementById('ytplayer')
       var iframeDoc = iframe.contentDocument || iframe.contentWindow.document
       if(Array.isArray(mediaRequests) && mediaRequests.length && iframe.getAttribute('src') == "" && iframeDoc.readyState == "complete") {
-        iframe.src = parseYoutubeLink(mediaRequests[0])
+        iframe.src = parseYoutubeLink(mediaRequests[currentVideoIndex])
       }
 }, 500);
 
