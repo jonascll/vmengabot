@@ -56,15 +56,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   function nextVideoClick(){
+    var iframe = document.getElementById('ytplayer')
       if(mediaRequests.length <= 1)  {
         window.alert("there is none or only 1 video")
       }
-      if(mediaRequests.length != currentVideoIndex) {
-        var iframe = document.getElementById('ytplayer')
-        iframe.src = parseYoutubeLink(mediaRequests[++currentVideoIndex])
-      } else {
+      if(mediaRequests.length == currentVideoIndex) {
         currentVideoIndex = 0
         iframe.src = parseYoutubeLink(mediaRequests[currentVideoIndex])
+      } else {
+        iframe.src = parseYoutubeLink(mediaRequests[++currentVideoIndex])
       }
   }
 
