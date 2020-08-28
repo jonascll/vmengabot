@@ -1,11 +1,6 @@
 const url = "https://vmengabot.herokuapp.com/requests"
 var mediaRequests = []
-var currentVideoIndex = localStorage.getItem('videoIndex');
-
-if(!currentVideoIndex) {
-  currentVideoIndex = 0
-}
-
+var currentVideoIndex = 0
 setInterval(() => {
       httpGet(url)
       var iframe = document.getElementById('ytplayer')
@@ -68,11 +63,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
       if(mediaRequests.length == currentVideoIndex + 1) {
         currentVideoIndex = 0
-        localStorage.setItem('videoIndex', currentVideoIndex);
         iframe.src = parseYoutubeLink(mediaRequests[currentVideoIndex])
       } else {
         iframe.src = parseYoutubeLink(mediaRequests[++currentVideoIndex])
-        localStorage.setItem('videoIndex', currentVideoIndex);
       }
   }
 
