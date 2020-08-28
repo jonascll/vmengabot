@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       if(mediaRequests.length <= 1)  {
         window.alert("there is none or only 1 video")
       }
-      if(mediaRequests.length == currentVideoIndex) {
+      if(mediaRequests.length == currentVideoIndex + 1) {
         currentVideoIndex = 0
         iframe.src = parseYoutubeLink(mediaRequests[currentVideoIndex])
       } else {
