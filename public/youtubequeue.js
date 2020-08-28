@@ -58,9 +58,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function nextVideoClick(){
       if(mediaRequests.length <= 1)  {
         window.alert("there is none or only 1 video")
-      } else {
+      }
+      if(mediaRequests.length != currentVideoIndex) {
         var iframe = document.getElementById('ytplayer')
         iframe.src = parseYoutubeLink(mediaRequests[++currentVideoIndex])
+      } else {
+        currentVideoIndex = 0
+        iframe.src = parseYoutubeLink(mediaRequests[currentVideoIndex])
       }
   }
 
