@@ -1,0 +1,33 @@
+{
+  "name": "twitchbhot",
+  "version": "1.0.0",
+  "description": "fuckifiknow",
+  "main": "bot.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "curl": "^0.1.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "jsdom": "^16.4.0",
+    "opn": "^6.0.0",
+    "pug": "^3.0.0",
+    "socket.io": "^2.3.0",
+    "tmi": "^2.0.0",
+    "tmi.js": "^1.5.0"
+  },
+  "scripts": {
+    "test": "node bot.js",
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonascll/twitchBHOT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonascll/twitchBHOT/issues"
+  },
+  "homepage": "https://github.com/jonascll/twitchBHOT#readme"
+}
