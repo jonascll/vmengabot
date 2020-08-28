@@ -4,7 +4,7 @@ var currentVideoIndex = 0
 setInterval(() => {
       httpGet(url)
       var iframe = document.getElementById('ytplayer')
-      if(Array.isArray(mediaRequests) && mediaRequests.length && iframe.src == "") {
+      if(Array.isArray(mediaRequests) && mediaRequests.length && iframe.getAttribute('src') == "") {
         iframe.src = parseYoutubeLink(mediaRequests[0])
       }
 }, 500);
