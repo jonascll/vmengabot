@@ -1,7 +1,7 @@
 const tmi = require('tmi.js');
 const express = require('express');
 const router = express.Router()
-
+const youtubeVideoRewardId = "82629030-57a4-440f-98db-4ac339d44131"
 var count = 0
 var mediaRequests = []
 //const hostname = 'https://software-engineering-devops-case.azurewebsites.net';
@@ -65,7 +65,7 @@ const opts = {
       client.say(target, `Vinny said goddamit ${count} times`);
     }
 
-    if(context["custom-reward-id"] === "1") {
+    if(context["custom-reward-id"] === youtubeVideoRewardId) {
       var link = commandName.substring(4)
       if(link.startsWith("https://www.youtube.com/watch?v=") || link.startsWith("https://m.youtube.com/watch?v=") ||  link.startsWith("https://youtu.be/")) {
         var exists = linkAlreadyExists(link)
