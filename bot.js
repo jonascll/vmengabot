@@ -50,7 +50,7 @@ const opts = {
   function onMessageHandler (target, context, msg, self) {
     if (self) { return; } // Ignore messages from the bot
     // Remove whitespace from chat message
-   
+   console.log(context)
     const commandName = msg.trim();
     if(commandName == "#sus"){
       var random = Math.floor(Math.random()*101)
@@ -65,7 +65,7 @@ const opts = {
       client.say(target, `Vinny said goddamit ${count} times`);
     }
 
-    if(commandName.startsWith("#mr")) {
+    if(context["custom-reward-id"] === "1") {
       var link = commandName.substring(4)
       if(link.startsWith("https://www.youtube.com/watch?v=") || link.startsWith("https://m.youtube.com/watch?v=") ||  link.startsWith("https://youtu.be/")) {
         var exists = linkAlreadyExists(link)
