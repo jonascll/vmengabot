@@ -4,14 +4,13 @@ const router = express.Router()
 const youtubeVideoRewardId = "82629030-57a4-440f-98db-4ac339d44131"
 var count = 0
 var mediaRequests = []
-//const hostname = 'https://software-engineering-devops-case.azurewebsites.net';
+
 
 
 app = express();
 
 
 
-//Everytime you change the value, send it to all the clients connected using:
 
 
 app.use('/', router);
@@ -66,7 +65,7 @@ const opts = {
     }
 
     if(context["custom-reward-id"] === youtubeVideoRewardId) {
-      var link = commandName.substring(4)
+      var link = commandName
       if(link.startsWith("https://www.youtube.com/watch?v=") || link.startsWith("https://m.youtube.com/watch?v=") ||  link.startsWith("https://youtu.be/")) {
         var exists = linkAlreadyExists(link)
         if(exists) {
